@@ -37,14 +37,13 @@ test/
 
 ### Exigences techniques couvertes
 
-| Exigence | Où |
-
-| Classes abstraites + héritage | `Task` (abstraite) → `NormalTask`, `UrgentTask` |
-| Interface implémentée | `Task implements Comparable<Task>, Identifiable` ; `Repository` et `Identifiable` sont des `abstract interface class` |
-| Génériques | `abstract interface class Repository<T extends Identifiable>`, implémenté par `JsonTaskRepository implements Repository<Task>` |
-| Exceptions personnalisées | `TaskManagerException` et ses sous-classes (`TaskNotFoundException`, `InvalidTaskException`, `InvalidPriorityException`, `DuplicateTaskException`, `RepositoryIOException`) |
-| Persistance JSON | `JsonTaskRepository` lit/écrit `tasks.json` via `dart:io` + `dart:convert` |
-| Tests unitaires (≥ 5) | 17 tests répartis sur 3 fichiers, package `test` |
+Exigence	Où
+Classes abstraites + héritage	Task (abstraite) → NormalTask, UrgentTask
+Interface implémentée	Task implements Comparable<Task>, Identifiable ; Repository et Identifiable sont des abstract interface class
+Génériques	abstract interface class Repository<T extends Identifiable>, implémenté par JsonTaskRepository implements Repository<Task>
+Exceptions personnalisées	TaskManagerException et ses sous-classes (TaskNotFoundException, InvalidTaskException, InvalidPriorityException, DuplicateTaskException, RepositoryIOException)
+Persistance JSON	JsonTaskRepository lit/écrit tasks.json via dart:io + dart:convert
+Tests unitaires (≥ 5)	17 tests répartis sur 3 fichiers, package test
 
 ## Prérequis
 
